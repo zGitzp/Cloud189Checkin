@@ -7,14 +7,14 @@ on:
     types: started
   workflow_dispatch:
   schedule:
-    - cron: 35 2 * * *
+    - cron: 35 0 * * *
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     environment: user
     steps:
-      - name: 🔀 random delay 0-300 seconds
-        run: sleep $((RANDOM % 301))
+      - name: 🔀 random delay 0-100 秒之前
+        run: sleep $((RANDOM % 101))
 
       - name: 🔌 Check out code
         uses: actions/checkout@main
