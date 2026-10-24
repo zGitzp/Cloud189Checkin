@@ -10,7 +10,7 @@ on:
     - cron: 35 2 * * *
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     environment: user
     steps:
       - name: 🔀 random delay 0-300 seconds
