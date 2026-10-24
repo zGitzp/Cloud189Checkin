@@ -9,7 +9,7 @@
 
 # 告警操作
 
-''' 
+```text
 将指定版本
 jobs:
   build-and-deploy:
@@ -17,10 +17,10 @@ jobs:
 改为
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-24.04
-'''
+    runs-on: ubuntu-26.04
+```
 
-'''
+```text
 - name: 📹 Restore cached Cookie
         id: cache-cookie-restore
         uses: actions/cache/restore@v4
@@ -28,9 +28,9 @@ jobs:
   - name: 📹 Restore cached Cookie
         id: cache-cookie-restore
         uses: actions/cache/restore@v5
-'''
+```
 
-'''
+```text
 - name: 📹 Save cached Cookie
         if: always() && env.TOKEN_HASH != ''
         uses: actions/cache/save@v4
@@ -39,11 +39,11 @@ jobs:
   - name: 📹 Save cached Cookie
         if: always() && env.TOKEN_HASH != ''
         uses: actions/cache/save@v5
-  '''
+  ```
 
-'''
+```text
 
-'''
+```
 
 
 # **目录**
