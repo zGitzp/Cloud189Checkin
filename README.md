@@ -7,6 +7,44 @@
 请勿直接修改 .env，然后提交到 github，源码仓库是公开的，别人可以直接看到你的账号密码。因为错误使用本仓库导致账号密码泄漏，并且在使用这个脚本出现账户异常情况，本人概不负责！！！
 如果遇到设备ID不存在，需要二次设备校验，请先参考[这个](https://github.com/wes-lin/Cloud189Checkin/issues/165)关闭自己的设备锁。
 
+# 告警操作
+
+''' 
+将指定版本
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+改为
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-24.04
+'''
+
+'''
+- name: 📹 Restore cached Cookie
+        id: cache-cookie-restore
+        uses: actions/cache/restore@v4
+  改为
+  - name: 📹 Restore cached Cookie
+        id: cache-cookie-restore
+        uses: actions/cache/restore@v5
+'''
+
+'''
+- name: 📹 Save cached Cookie
+        if: always() && env.TOKEN_HASH != ''
+        uses: actions/cache/save@v4
+  改为
+
+  - name: 📹 Save cached Cookie
+        if: always() && env.TOKEN_HASH != ''
+        uses: actions/cache/save@v5
+  '''
+
+'''
+
+'''
+
 
 # **目录**
 
